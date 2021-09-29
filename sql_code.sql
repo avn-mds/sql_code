@@ -77,3 +77,16 @@ GROUP BY
 ORDER BY
   t.Name;
 GO
+
+
+
+/****** Column data types?  ******/
+
+SELECT COLUMN_NAME,
+       DATA_TYPE,
+       IS_NULLABLE,
+       CHARACTER_MAXIMUM_LENGTH,
+       NUMERIC_PRECISION,
+       NUMERIC_SCALE
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_NAME='your_table_name';
